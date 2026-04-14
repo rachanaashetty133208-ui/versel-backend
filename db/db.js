@@ -2,9 +2,7 @@ import mongoose from "mongoose";
 
 const connectToMongoDB = async () => {
   try {
-    await mongoose.connect(
-      "mongodb+srv://username:password@cluster.mongodb.net/rach_note_db?retryWrites=true&w=majority",
-    );
+    await mongoose.connect("mongodb://localhost:27017/rach_note_db");
 
     console.log("MongoDB Connected Successfully");
     return true;
